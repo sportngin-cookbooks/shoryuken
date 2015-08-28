@@ -1,0 +1,11 @@
+default[:shoryuken][:app_dir] = nil
+default[:shoryuken][:config] = nil
+default[:shoryuken][:logfile] = "/var/log/shoryken.log"
+default[:shoryuken][:pidfile] = "/var/run/shoryken.pid"
+default[:shoryuken][:bundle_exec] = true
+default[:shoryuken][:rails] = true
+default[:shoryuken][:concurrency] = nil
+default[:shoryuken][:require] = nil
+default[:shoryuken][:verbose] = false
+default[:shoryuken][:user] = nil
+default[:shoryuken][:service_action] = :enable
