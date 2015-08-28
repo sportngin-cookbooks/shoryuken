@@ -2,7 +2,7 @@ include_recipe "runit"
 command = "chpst"
 command += " -u #{node[:shoryuken][:user]} " if node[:shoryuken][:user]
 command += " -/ #{node[:shoryuken][:app_dir]} " if node[:shoryuken][:app_dir]
-command += " bunde exec" if node[:shoryuken][:bundle_exec]
+command += " bundle exec" if node[:shoryuken][:bundle_exec]
 command += " shoryuken --daemon"
 command += " --verbose" if node[:shoryuken][:verbose]
 command += " --rails" if node[:shoryuken][:rails]
