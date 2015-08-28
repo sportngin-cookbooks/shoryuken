@@ -1,7 +1,7 @@
 default[:shoryuken][:app_dir] = nil
-default[:shoryuken][:config] = nil
-default[:shoryuken][:logfile] = "/var/log/shoryken.log"
-default[:shoryuken][:pidfile] = "/var/run/shoryken.pid"
+default[:shoryuken][:config] = "config/shoryuken.yml"
+default[:shoryuken][:logfile] = "log/shoryuken.log"
+default[:shoryuken][:pidfile] = "tmp/pids/shoryuken.pid"
 default[:shoryuken][:bundle_exec] = true
 default[:shoryuken][:rails] = true
 default[:shoryuken][:concurrency] = nil

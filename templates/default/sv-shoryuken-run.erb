@@ -1,3 +1,5 @@
 #!/bin/sh
+<%= "cd #{@options[:app_dir]}" if @options[:app_dir]%>
 exec 2>&1
+<%= "export RAILS_ENV=#{@options[:rails_env]}" if @options[:rails_env]%>
 exec <%= @options[:command] %>
