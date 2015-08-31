@@ -1,9 +1,9 @@
 include_recipe "runit"
 command = "chpst"
 command += " -u #{node[:shoryuken][:user]} " if node[:shoryuken][:user]
-command += " -/ #{node[:shoryuken][:app_dir]} " if node[:shoryuken][:app_dir]
+command += " -e /etc/sv/shoryuken/env" if node[:shoryuken][:environment_variables]
 command += " bundle exec" if node[:shoryuken][:bundle_exec]
-command += " shoryuken --daemon"
+command += " shoryuken"
 command += " --verbose" if node[:shoryuken][:verbose]
 command += " --rails" if node[:shoryuken][:rails]
 command += " --pidfile #{node[:shoryuken][:pidfile]}" if node[:shoryuken][:pidfile]
@@ -15,4 +15,5 @@ command += " --require #{node[:shoryuken][:require]}" if node[:shoryuken][:requi
 runit_service "shoryuken" do
   action node[:shoryuken][:service_action]
   options(:command => command)
+  env node[:shoryuken][:environment_variables]
 end

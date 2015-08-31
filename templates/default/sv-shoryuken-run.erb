@@ -1,5 +1,15 @@
 #!/bin/sh
-<%= "cd #{@options[:app_dir]}" if @options[:app_dir]%>
+
+set -e
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+<% if @options[:app_dir] %>
+
+APP_ROOT=<%= @options[:app_dir] %>
+cd $APP_ROOT
+
+<% end %>
+
 exec 2>&1
-<%= "export RAILS_ENV=#{@options[:rails_env]}" if @options[:rails_env]%>
+
 exec <%= @options[:command] %>
