@@ -14,5 +14,6 @@ suites:
       - recipe[shoryuken::default]
     attributes:
       shoryuken:
+        app_dir: /srv/www/myapp/current
         environment_variables:
           DERP: herp

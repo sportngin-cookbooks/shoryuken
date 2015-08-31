@@ -11,6 +11,7 @@ describe 'shoryuken' do
     it { should be_a_file }
     it { should be_owned_by 'root' }
     its(:content) { should match %r(bundle exec shoryuken --rails --pidfile tmp/pids/shoryuken.pid --logfile log/shoryuken.log) }
+    its(:content) { should match %r(APP_ROOT=/srv/www/myapp/current) }
   end
 
   describe file('/etc/sv/shoryuken/env') do

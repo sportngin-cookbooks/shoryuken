@@ -14,6 +14,6 @@ command += " --require #{node[:shoryuken][:require]}" if node[:shoryuken][:requi
 
 runit_service "shoryuken" do
   action node[:shoryuken][:service_action]
-  options(:command => command)
+  options(:command => command, :app_dir => node[:shoryuken][:app_dir])
   env node[:shoryuken][:environment_variables]
 end
