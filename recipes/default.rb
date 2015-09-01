@@ -16,4 +16,5 @@ runit_service "shoryuken" do
   action node[:shoryuken][:service_action]
   options(:command => command, :app_dir => node[:shoryuken][:app_dir])
   env node[:shoryuken][:environment_variables]
+  sv_timeout node[:shoryuken][:service_timeout]
 end

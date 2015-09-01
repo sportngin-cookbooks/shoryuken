@@ -9,3 +9,4 @@ default[:shoryuken][:require] = nil
 default[:shoryuken][:verbose] = false
 default[:shoryuken][:user] = nil
 default[:shoryuken][:service_action] = :enable
+default[:shoryuken][:service_timeout] = 10
