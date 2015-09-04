@@ -15,5 +15,6 @@ suites:
     attributes:
       shoryuken:
         app_dir: /srv/www/myapp/current
+        number_of_processes: 2
         environment_variables:
           DERP: herp

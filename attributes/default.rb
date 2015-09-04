@@ -1,7 +1,7 @@
 default[:shoryuken][:app_dir] = nil
 default[:shoryuken][:config] = "config/shoryuken.yml"
 default[:shoryuken][:logfile] = "log/shoryuken.log"
-default[:shoryuken][:pidfile] = "tmp/pids/shoryuken.pid"
+default[:shoryuken][:pidsdir] = "tmp/pids"
 default[:shoryuken][:bundle_exec] = true
 default[:shoryuken][:rails] = true
 default[:shoryuken][:concurrency] = nil
@@ -10,3 +10,4 @@ default[:shoryuken][:verbose] = false
 default[:shoryuken][:user] = nil
 default[:shoryuken][:service_action] = :enable
 default[:shoryuken][:service_timeout] = 10
+default[:shoryuken][:number_of_processes] = 1
