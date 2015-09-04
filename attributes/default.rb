@@ -10,3 +10,4 @@ default[:shoryuken][:verbose] = false
 default[:shoryuken][:user] = nil
 default[:shoryuken][:service_action] = :enable
 default[:shoryuken][:service_timeout] = 10
+default[:shoryuken][:number_of_processes] = 1
